@@ -30,6 +30,8 @@ jobs:
 
       - name: Build APK
         run: eas build -p android --profile preview --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       # The step above prints a download URL like:
       #   https://expo.dev/artifacts/eas/...apk
